@@ -180,6 +180,7 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System" />
     <Reference Include="System.Xml" />
+    <Reference Include="mscorlib" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -699,7 +700,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 鍜?x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -912,4 +913,6 @@
 
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\\..\\tools\\costura\\build\\Costura.Fody.props" Condition="Exists('..\\..\\tools\\costura\\build\\Costura.Fody.props')" />
+  <Import Project="..\\..\\tools\\fody\\build\\Fody.targets" Condition="Exists('..\\..\\tools\\fody\\build\\Fody.targets')" />
 </Project>
